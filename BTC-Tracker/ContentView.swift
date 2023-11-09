@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var currencyListViewModel: CurrencyListViewModel
+    @ObservedObject var investmentViewModel: InvestmentViewModel
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            InvestmentView(viewModel: investmentViewModel)
+            CurrencyListView(viewModel: currencyListViewModel, investmentViewModel: investmentViewModel)
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
-}
+
+

@@ -14,6 +14,13 @@
 		0E8CC6012AFBC0FE008BDC1D /* BTC_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CC6002AFBC0FE008BDC1D /* BTC_TrackerTests.swift */; };
 		0E8CC60B2AFBC0FE008BDC1D /* BTC_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CC60A2AFBC0FE008BDC1D /* BTC_TrackerUITests.swift */; };
 		0E8CC60D2AFBC0FE008BDC1D /* BTC_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CC60C2AFBC0FE008BDC1D /* BTC_TrackerUITestsLaunchTests.swift */; };
+		0E8CC61C2AFBC3AE008BDC1D /* CurrencyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CC61B2AFBC3AE008BDC1D /* CurrencyListViewModel.swift */; };
+		0E8CC61F2AFBC65F008BDC1D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8CC61E2AFBC65F008BDC1D /* Currency.swift */; };
+		0ED0D60D2AFC3142006F7A3A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0D60C2AFC3142006F7A3A /* NetworkManager.swift */; };
+		0ED0D6102AFC31FC006F7A3A /* BTCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0D60F2AFC31FC006F7A3A /* BTCService.swift */; };
+		0ED0D6132AFC370B006F7A3A /* CurrencyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0D6122AFC370B006F7A3A /* CurrencyListView.swift */; };
+		0ED0D6162AFC4087006F7A3A /* InvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0D6152AFC4087006F7A3A /* InvestmentView.swift */; };
+		0ED0D61A2AFC46FD006F7A3A /* InvestmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0D6192AFC46FD006F7A3A /* InvestmentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +51,13 @@
 		0E8CC6062AFBC0FE008BDC1D /* BTC-TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BTC-TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8CC60A2AFBC0FE008BDC1D /* BTC_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC_TrackerUITests.swift; sourceTree = "<group>"; };
 		0E8CC60C2AFBC0FE008BDC1D /* BTC_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0E8CC61B2AFBC3AE008BDC1D /* CurrencyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListViewModel.swift; sourceTree = "<group>"; };
+		0E8CC61E2AFBC65F008BDC1D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		0ED0D60C2AFC3142006F7A3A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0ED0D60F2AFC31FC006F7A3A /* BTCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCService.swift; sourceTree = "<group>"; };
+		0ED0D6122AFC370B006F7A3A /* CurrencyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListView.swift; sourceTree = "<group>"; };
+		0ED0D6152AFC4087006F7A3A /* InvestmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentView.swift; sourceTree = "<group>"; };
+		0ED0D6192AFC46FD006F7A3A /* InvestmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,9 @@
 		0E8CC5EE2AFBC0FD008BDC1D /* BTC-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				0ED0D6142AFC402B006F7A3A /* BTC Investment */,
+				0ED0D60B2AFC3129006F7A3A /* Managers */,
+				0E8CC6192AFBC361008BDC1D /* Currency List */,
 				0E8CC5EF2AFBC0FD008BDC1D /* BTC_TrackerApp.swift */,
 				0E8CC5F12AFBC0FD008BDC1D /* ContentView.swift */,
 				0E8CC5F32AFBC0FE008BDC1D /* Assets.xcassets */,
@@ -125,6 +142,82 @@
 				0E8CC60C2AFBC0FE008BDC1D /* BTC_TrackerUITestsLaunchTests.swift */,
 			);
 			path = "BTC-TrackerUITests";
+			sourceTree = "<group>";
+		};
+		0E8CC6192AFBC361008BDC1D /* Currency List */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D60E2AFC31E6006F7A3A /* Service */,
+				0E8CC61D2AFBC62C008BDC1D /* Model */,
+				0ED0D6112AFC36E5006F7A3A /* View */,
+				0E8CC61A2AFBC384008BDC1D /* ViewModel */,
+			);
+			path = "Currency List";
+			sourceTree = "<group>";
+		};
+		0E8CC61A2AFBC384008BDC1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E8CC61B2AFBC3AE008BDC1D /* CurrencyListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E8CC61D2AFBC62C008BDC1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E8CC61E2AFBC65F008BDC1D /* Currency.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0ED0D60B2AFC3129006F7A3A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D60C2AFC3142006F7A3A /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0ED0D60E2AFC31E6006F7A3A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D60F2AFC31FC006F7A3A /* BTCService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0ED0D6112AFC36E5006F7A3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D6122AFC370B006F7A3A /* CurrencyListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0ED0D6142AFC402B006F7A3A /* BTC Investment */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D6182AFC46DB006F7A3A /* ViewModel */,
+				0ED0D6172AFC46C1006F7A3A /* View */,
+			);
+			path = "BTC Investment";
+			sourceTree = "<group>";
+		};
+		0ED0D6172AFC46C1006F7A3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D6152AFC4087006F7A3A /* InvestmentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0ED0D6182AFC46DB006F7A3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0D6192AFC46FD006F7A3A /* InvestmentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +350,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8CC61F2AFBC65F008BDC1D /* Currency.swift in Sources */,
+				0ED0D6102AFC31FC006F7A3A /* BTCService.swift in Sources */,
+				0ED0D6132AFC370B006F7A3A /* CurrencyListView.swift in Sources */,
+				0E8CC61C2AFBC3AE008BDC1D /* CurrencyListViewModel.swift in Sources */,
+				0ED0D60D2AFC3142006F7A3A /* NetworkManager.swift in Sources */,
 				0E8CC5F22AFBC0FD008BDC1D /* ContentView.swift in Sources */,
+				0ED0D61A2AFC46FD006F7A3A /* InvestmentViewModel.swift in Sources */,
 				0E8CC5F02AFBC0FD008BDC1D /* BTC_TrackerApp.swift in Sources */,
+				0ED0D6162AFC4087006F7A3A /* InvestmentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

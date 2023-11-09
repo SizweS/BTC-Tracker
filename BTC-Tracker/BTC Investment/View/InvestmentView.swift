@@ -9,39 +9,54 @@ import SwiftUI
 import Combine
 
 struct InvestmentView: View {
-    @Binding var bitcoinAmount: Double
+    @ObservedObject var viewModel: InvestmentViewModel
     @State private var inputValue = ""
-    
+
     var body: some View {
         VStack {
-            Text("BTC Investment Amount: \(bitcoinAmount)")
+            VStack {
+                Text("\(viewModel.bitcoinAmount)")
+                    .font(.largeTitle)
+                    .bold()
+                Text("BTC investment")
+                    .font(.subheadline)
+            }
+            .padding()
+            
             HStack {
-                TextField("Enter Bitcoin Amount", text: $inputValue)
+                TextField("Enter BTC Amount", text: $inputValue)
                     .keyboardType(.decimalPad)
                     .onReceive(Just(inputValue)) { newValue in
-                        let filtered = newValue.filter { "0123456789.,".contains($0) }
+                        let filtered = newValue.filter { "0123456789,.".contains($0) }
                         if filtered != newValue {
                             inputValue = filtered
                         }
                     }
+                    .textFieldStyle(.roundedBorder)
+                    .cornerRadius(8)
+                
                 Button(action: {
                     let formatter = NumberFormatter()
-                    formatter.locale = Locale.current // Use the current locale
+                    formatter.locale = Locale.current
                     if let newValue = formatter.number(from: inputValue)?.doubleValue {
-                        bitcoinAmount = newValue
+                        viewModel.bitcoinAmount = newValue
                     }
                 }) {
                     Text("Update")
+                        .bold()
                 }
+                .buttonStyle(.borderedProminent)
+                .cornerRadius(8)
             }
+            .padding()
         }
+        .padding()
     }
 }
 
 struct InvestmentView_Previews: PreviewProvider {
-    @State static var bitcoinAmount: Double = 0.0
-
     static var previews: some View {
-        InvestmentView(bitcoinAmount: $bitcoinAmount)
+        let viewModel = InvestmentViewModel()
+        return InvestmentView(viewModel: viewModel)
     }
 }

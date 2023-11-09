@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+import SwiftUI
+
 @main
 struct BTC_TrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let btcService = BTCService()
+            let investmentViewModel = InvestmentViewModel()
+            let currencyListViewModel = CurrencyListViewModel(btcService: btcService, investmentViewModel: investmentViewModel)
+            ContentView(currencyListViewModel: currencyListViewModel, investmentViewModel: investmentViewModel)
         }
     }
 }
+
