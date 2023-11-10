@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4125832AFDFBE0001E0DD5 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		0E8CC5EC2AFBC0FD008BDC1D /* BTC-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTC-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8CC5EF2AFBC0FD008BDC1D /* BTC_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTC_TrackerApp.swift; sourceTree = "<group>"; };
 		0E8CC5F12AFBC0FD008BDC1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		0E8CC5E32AFBC0FD008BDC1D = {
 			isa = PBXGroup;
 			children = (
+				0E4125832AFDFBE0001E0DD5 /* Readme.md */,
 				0E8CC5EE2AFBC0FD008BDC1D /* BTC-Tracker */,
 				0E8CC5FF2AFBC0FE008BDC1D /* BTC-TrackerTests */,
 				0E8CC6092AFBC0FE008BDC1D /* BTC-TrackerUITests */,
