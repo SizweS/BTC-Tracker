@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 @main
 struct BTC_TrackerApp: App {
     var body: some Scene {

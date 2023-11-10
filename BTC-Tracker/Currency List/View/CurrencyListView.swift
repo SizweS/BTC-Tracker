@@ -31,7 +31,7 @@ struct CurrencyListView: View {
                                 }
                                 Spacer()
                                 let formattedChangePct = String(format: "%.3f", fluctuation.change_pct)
-                                Text("\(fluctuation.change_pct >= 0 ? "+\(formattedChangePct)%" : "-\(formattedChangePct)%")")
+                                Text("\(fluctuation.change_pct >= 0 ? "+\(formattedChangePct)%" : "\(formattedChangePct)%")")
                                         .foregroundColor(fluctuation.change_pct >= 0 ? .green : .red)
                                         .font(.footnote)
                             }
